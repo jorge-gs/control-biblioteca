@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Biblioteca.Lista"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biblioteca"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ListView Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--TODO: Hacer Dinámico-->
+        <x:String>Carreras</x:String>
+        <x:String>Clases</x:String>
+        <x:String>Periodos</x:String>
+        <x:String>Personas</x:String>
+        <x:String>Reportes</x:String>
+    </ListView>
+</Page>
