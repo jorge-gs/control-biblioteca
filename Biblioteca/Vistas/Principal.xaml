@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="ColumnaMaestro" Width="360" />
+            <ColumnDefinition x:Name="ColumnaMaestro" Width="240" />
             <ColumnDefinition x:Name="ColumnaDetalle" Width="*" />
         </Grid.ColumnDefinitions>
 
