@@ -30,9 +30,33 @@ namespace Biblioteca
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+        }
 
-            this.FrameMaestro.Navigate(typeof(Maestro));
-            this.FrameDetalle.Navigate(typeof(Detalle));
+        private void OnPersonasClick(object sender, RoutedEventArgs e)
+        {
+            this.MostrarMensaje("Carreras");
+        }
+
+        private void OnClasesClick(object sender, RoutedEventArgs e)
+        {
+            this.MostrarMensaje("Carreras");
+        }
+
+        private void OnCarrerasClick(object sender, RoutedEventArgs e)
+        {
+            this.MostrarMensaje("Carreras");
+        }
+
+        private async void MostrarMensaje(String nombre)
+        {
+            ContentDialog dialogo = new ContentDialog
+            {
+                Title = "Mostrar " + nombre,
+                Content = "Se debería de mostrar el menú de " + nombre,
+                CloseButtonText = "Está bien"
+            };
+
+            ContentDialogResult result = await dialogo.ShowAsync();
         }
     }
 }

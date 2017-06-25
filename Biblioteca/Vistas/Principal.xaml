@@ -8,33 +8,54 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="FilaCarreras" Height="auto" />
+            <RowDefinition x:Name="FilaClases" Height="auto" />
+            <RowDefinition x:Name="FilaPersonas" Height="auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="ColumnaMaestro" Width="240" />
-            <ColumnDefinition x:Name="ColumnaDetalle" Width="*" />
+            <ColumnDefinition x:Name="ColumnaBotones" Width="auto" />
+            <ColumnDefinition x:Name="ColumnaContenido" Width="*" />
         </Grid.ColumnDefinitions>
 
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="EstadoPredeterminado">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="720" />
-                    </VisualState.StateTriggers>
-                </VisualState>
-                <VisualState x:Name="EstadoAngosto" >
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="ColumnaMaestro.Width" Value="*" />
-                        <Setter Target="ColumnaDetalle.Width" Value="0" />
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+        <Button 
+            x:Name="Carreras"
+            Grid.Row="0" Grid.Column="0"
+            Margin="5"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            ToolTipService.ToolTip="Carreras"
+            Click="OnCarrerasClick">
+            <Image Source="ms-appx:///Assets/Iconos/carreras.png" />
+        </Button>
+        <Button
+            x:Name="Clases"
+            Grid.Row="1" Grid.Column="0"
+            Margin="5"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            ToolTipService.ToolTip="Clases"
+            Click="OnClasesClick">
+            <Image Source="ms-appx:///Assets/Iconos/clases.png" />
+        </Button>
+        <Button
+            x:Name="Personas"
+            Grid.Row="2" Grid.Column="0"
+            Margin="5"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            ToolTipService.ToolTip="Personas"
+            Click="OnPersonasClick">
+            <Image Source="ms-appx:///Assets/Iconos/personas.png" />
+        </Button>
 
-        <Frame x:Name="FrameMaestro" Grid.Column="0" />
-
-        <Frame x:Name="FrameDetalle" Grid.Column="1" />
+        <Frame
+            x:Name="Contenido"
+            Grid.Row="0" Grid.Column="1"
+            Grid.RowSpan="4"
+            Background="Aqua"/>
 
     </Grid>
 </Page>
