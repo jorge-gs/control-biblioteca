@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Biblioteca.VistaClases"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biblioteca"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel x:Name="PanelClases" Grid.Row="1">
+            <TextBlock x:Name="TituloClase" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Clases" VerticalAlignment="Top" Margin="5"/>
+            <Button x:Name="BotonAgregarClase" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5" Padding="8,4,4,4" RelativePanel.Below="TituloClase">
+                <SymbolIcon Symbol="Add" />
+            </Button>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Agregar Clase" Margin="5" RelativePanel.RightOf="BotonAgregarClase" RelativePanel.AlignVerticalCenterWith="BotonAgregarClase"/>
+        </RelativePanel>
+        <ListView x:Name="ListaClases" Grid.Row="2"/>
+        <RelativePanel x:Name="BarraOpciones">
+            <TextBlock x:Name="TituloBuscar" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top" Height="20"/>
+            <TextBox x:Name="BuscadorClase" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" RelativePanel.Below="TituloBuscar" PlaceholderText="Nombre o Código" MaxWidth="200" MinWidth="140"/>
+            <TextBlock x:Name="TituloFiltro" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Text="Filtrar por" VerticalAlignment="Top" RelativePanel.RightOf="BuscadorClase" Height="20"/>
+            <TextBlock x:Name="FiltroCarrera" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Carrera" VerticalAlignment="Top" Margin="5" RelativePanel.AlignVerticalCenterWith="BuscadorClase" RelativePanel.RightOf="BuscadorClase"/>
+            <TextBlock x:Name="FiltroUVs" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="UVs" VerticalAlignment="Top" Margin="5" RelativePanel.RightOf="BuscadorCarrera" RelativePanel.AlignVerticalCenterWith="BuscadorClase"/>
+            <TextBox x:Name="TextoUVs" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="Number" PlaceholderText="UVs" Margin="5" RelativePanel.RightOf="FiltroUVs" RelativePanel.AlignVerticalCenterWith="BuscadorClase" Width="64" MaxHeight="32" MaxWidth="32" Height="32"/>
+            <AutoSuggestBox x:Name="BuscadorCarrera" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5" RelativePanel.RightOf="FiltroCarrera" RelativePanel.AlignVerticalCenterWith="BuscadorClase" PlaceholderText="Nombre o Código" MaxWidth="200" MinWidth="140"/>
+            <Button x:Name="BotonAgregarPeriodo" Margin="5" RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Right">
+                <SymbolIcon Symbol="Add" />
+            </Button>
+            <TextBlock HorizontalAlignment="Right" Height="20" TextWrapping="Wrap" Text="Agregar Periodo" VerticalAlignment="Center" Margin="5" RelativePanel.LeftOf="BotonAgregarPeriodo" RelativePanel.AlignVerticalCenterWith="BotonAgregarPeriodo"/>
+        </RelativePanel>
+        <Frame x:Name="FrameClase" Content="" Grid.Column="1" Margin="0" Grid.RowSpan="3"/>
+
+    </Grid>
+</Page>

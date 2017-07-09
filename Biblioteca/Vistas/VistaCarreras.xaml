@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="Biblioteca.VistaCarreras"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biblioteca"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="ColumnaCarrera" Width="2*" />
+            <ColumnDefinition x:Name="ColumnaInformacion" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="FilaTitulo" Height="79" />
+            <RowDefinition Height="81.5"/>
+            <RowDefinition x:Name="FilaContenido" />
+        </Grid.RowDefinitions>
+
+        <RelativePanel
+            x:Name="PanelCarreras"
+            Grid.Column="0"
+            Grid.Row="1" Margin="0">
+            <TextBlock
+                x:Name="TituloCarrera"
+                Text="Carreras"
+                Margin="5"/>
+            <Button 
+                x:Name="BotonAgregarCarrera"
+                Margin="5"
+                RelativePanel.Below="TituloCarrera">
+                <SymbolIcon Symbol="Add" />
+            </Button>
+            <TextBlock 
+                Text="Agregar Carrera"
+                Margin="5"
+                RelativePanel.AlignVerticalCenterWith="BotonAgregarCarrera"
+                RelativePanel.RightOf="BotonAgregarCarrera"/>
+        </RelativePanel>
+
+        <ListView x:Name="ListaCarreras" SelectionChanged="ListView_SelectionChanged" Grid.Row="2" Margin="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <RelativePanel x:Name="BarraOpciones">
+            <TextBlock x:Name="TituloBuscar" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top" Margin="5"/>
+            <TextBox x:Name="BuscadorCarrera" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Nombre o Código" Margin="5" RelativePanel.Below="TituloBuscar" MinWidth="140" MaxWidth="200" MaxHeight="32"/>
+        </RelativePanel>
+        <RelativePanel Grid.Column="1" Margin="0" Grid.RowSpan="3"/>
+
+        <!--<ListView
+            x:Name="ListaCarreras"
+            Grid.Column="0">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Carrera">
+                    <StackPanel>
+                        <TextBlock x:Name="codigo" Width="50" />
+                        <TextBlock x:Name="nombre" Text="{x:Bind codigo}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView>
+            
+        </ListView>-->
+    </Grid>
+</Page>

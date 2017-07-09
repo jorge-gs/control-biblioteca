@@ -1,0 +1,6 @@
+﻿namespace Biblioteca
+{
+    class Clase
+    {
+    }
+}

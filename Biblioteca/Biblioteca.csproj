@@ -95,10 +95,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Carrera.cs" />
+    <Compile Include="Modelos\Clase.cs" />
+    <Compile Include="Vistas\VistaClase.xaml.cs">
+      <DependentUpon>VistaClase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaPersonas.xaml.cs">
+      <DependentUpon>VistaPersonas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VistaClases.xaml.cs">
+      <DependentUpon>VistaClases.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\VistaCarreras.xaml.cs">
+      <DependentUpon>VistaCarreras.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -107,9 +121,12 @@
     <None Include="Biblioteca_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Iconos\carreras.png" />
-    <Content Include="Assets\Iconos\clases.png" />
-    <Content Include="Assets\Iconos\personas.png" />
+    <Content Include="Assets\Iconos\carreras.scale-200.png" />
+    <Content Include="Assets\Iconos\carreras.scale-100.png" />
+    <Content Include="Assets\Iconos\clases.scale-200.png" />
+    <Content Include="Assets\Iconos\clases.scale-100.png" />
+    <Content Include="Assets\Iconos\personas.scale-200.png" />
+    <Content Include="Assets\Iconos\personas.scale-100.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -124,7 +141,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Vistas\VistaClase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\VistaPersonas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\VistaClases.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Principal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\VistaCarreras.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

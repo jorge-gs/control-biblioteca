@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Biblioteca.VistaClase"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biblioteca"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Text="Clase" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5,5,0,5" Grid.Row="3" TextWrapping="Wrap" Text="Código" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Grid.Row="5" TextWrapping="Wrap" Text="Unidades Valorativas" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Grid.Row="1" TextWrapping="Wrap" Text="Periodo" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="5" Grid.Row="2" TextWrapping="Wrap" Text="Sección" VerticalAlignment="Top"/>
+        <ComboBox x:Name="SelectorAño" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="1" VerticalAlignment="Stretch" Width="120" PlaceholderText="Año"/>
+        <ComboBox x:Name="SelectorPeriodo" Grid.Column="1" HorizontalAlignment="Left" Margin="135,5,5,5" Grid.Row="1" VerticalAlignment="Stretch" Width="120" PlaceholderText="Periodo"/>
+        <ComboBox x:Name="SelectorSeccion" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="2" VerticalAlignment="Stretch" Width="120" PlaceholderText="Sección"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="3" TextWrapping="Wrap" PlaceholderText="Código" Width="120"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="4" TextWrapping="Wrap" Width="120" PlaceholderText="Nombre"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="5" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="UVs"/>
+    </Grid>
+</Page>

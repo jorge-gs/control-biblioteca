@@ -30,21 +30,22 @@ namespace Biblioteca
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            this.Contenido.Navigate(typeof(VistaCarreras));
         }
 
         private void OnPersonasClick(object sender, RoutedEventArgs e)
         {
-            this.MostrarMensaje("Carreras");
+            this.Contenido.Navigate(typeof(VistaPersonas));
         }
 
         private void OnClasesClick(object sender, RoutedEventArgs e)
         {
-            this.MostrarMensaje("Carreras");
+            this.Contenido.Navigate(typeof(VistaClases));
         }
 
         private void OnCarrerasClick(object sender, RoutedEventArgs e)
         {
-            this.MostrarMensaje("Carreras");
+            this.Contenido.Navigate(typeof(VistaCarreras));
         }
 
         private async void MostrarMensaje(String nombre)

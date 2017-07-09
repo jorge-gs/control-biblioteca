@@ -54,8 +54,7 @@
         <Frame
             x:Name="Contenido"
             Grid.Row="0" Grid.Column="1"
-            Grid.RowSpan="4"
-            Background="Aqua"/>
+            Grid.RowSpan="4" />
 
     </Grid>
 </Page>

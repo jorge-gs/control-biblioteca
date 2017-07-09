@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="Biblioteca.VistaPersonas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biblioteca"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel x:Name="BarraOpciones" Margin="0">
+            <TextBlock x:Name="TituloBuscar" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top" Margin="5"/>
+            <TextBox x:Name="BuscadorPersona" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="32" RelativePanel.Below="TituloBuscar" PlaceholderText="Nombre, Identidad o Cuenta" Margin="5" Width="210" MinWidth="210" MaxWidth="210"/>
+            <TextBlock x:Name="TituloFiltrar" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Filtrar por" VerticalAlignment="Top" Margin="5" RelativePanel.RightOf="BuscadorPersona"/>
+            <TextBlock x:Name="FiltroCategoria" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Categorías" VerticalAlignment="Top" Margin="5" RelativePanel.AlignVerticalCenterWith="BuscadorPersona" RelativePanel.RightOf="BuscadorPersona"/>
+            <ComboBox x:Name="ComboCategorías" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Margin="5" RelativePanel.AlignVerticalCenterWith="BuscadorPersona" RelativePanel.RightOf="FiltroCategoria"
+                      DisplayMemberPath="Content">
+                <CheckBox Content="Administrativo"/>
+                <CheckBox Content="Bibliotecario"/>
+                <CheckBox Content="Catedrático"/>
+                <CheckBox Content="Estudiante"/>
+                <CheckBox Content="Otro"/>
+            </ComboBox>
+        </RelativePanel>
+        <RelativePanel x:Name="PanelPersonas" Margin="0" Grid.Row="1">
+            <TextBlock x:Name="TituloPersona" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Personas" VerticalAlignment="Top" Margin="5"/>
+            <Button x:Name="BotonAgregarPersona" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5" RelativePanel.Below="TituloPersona">
+                <SymbolIcon Symbol="Add" />
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Agregar Persona" VerticalAlignment="Top" Margin="5" RelativePanel.AlignVerticalCenterWith="BotonAgregarPersona" RelativePanel.RightOf="BotonAgregarPersona"/>
+        </RelativePanel>
+        <ListView x:Name="ListaPersonas" Margin="0" Grid.Row="2"/>
+        <RelativePanel x:Name="PanelInfo" Grid.Column="1" Margin="0" Grid.RowSpan="3"/>
+
+    </Grid>
+</Page>
